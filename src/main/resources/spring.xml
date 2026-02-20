@@ -5,9 +5,9 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="programmer" class="com.ankit.Programmer">
+    <bean id="programmer" class="com.ankit.Programmer" autowire="byName">
         <constructor-arg value="25" />
         <property name="laptop" ref="lap1"/>
     </bean>
-    <bean id="lap1" class="com.ankit.Laptop"/>
+    <bean id="lap1" class="com.ankit.Laptop" lazy-init="true"/>
 </beans>
