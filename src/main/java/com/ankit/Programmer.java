@@ -8,6 +8,10 @@ public class Programmer {
         System.out.println("Programmer class constructor");
     }
 
+    public Programmer(int age) {
+        setAge(age);
+    }
+
     public void code(){
         System.out.println("Coding..." + age);
         laptop.compile();
