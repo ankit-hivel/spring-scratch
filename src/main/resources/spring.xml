@@ -5,6 +5,9 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="programmer" class="com.ankit.Programmer" scope="prototype">
+    <bean id="programmer" class="com.ankit.Programmer">
+        <property name="age" value="23"/>
+        <property name="laptop" ref="lap1"/>
     </bean>
+    <bean id="lap1" class="com.ankit.Laptop"/>
 </beans>
