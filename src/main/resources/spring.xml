@@ -7,7 +7,10 @@
     <!-- bean definitions here -->
     <bean id="programmer" class="com.ankit.Programmer" autowire="byName">
         <constructor-arg value="25" />
-        <property name="laptop" ref="lap1"/>
+<!--        inner bean (available only to programmer bean)      -->
+        <property name="laptop">
+            <bean id="lap2" class="com.ankit.Laptop"/>
+        </property>
     </bean>
     <bean id="lap1" class="com.ankit.Laptop" lazy-init="true"/>
 </beans>
